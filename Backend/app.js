@@ -18,6 +18,10 @@ app.use(
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+app.get('/', (req, res) => {
+  res.send("GET Request Called")
+})
+
 dbConnection();
 
 app.use("/api/v1/message", messageRouter);
