@@ -15,6 +15,13 @@ app.use(
   })
 );
 
+app.get("/", (req, res) => {
+  res.json({
+    success: true,
+    message: "Working..",
+  });
+});
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
